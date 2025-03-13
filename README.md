@@ -1,7 +1,7 @@
-# README: VectorDatabase.py
+# README: Orchestraitor Backend
 
 ## Overview
-`VectorDatabase.py` is a Python script designed to build a model router that selects the best-performing model for answering user queries based on well-known large language model (LLM) benchmarks. It leverages FAISS and Sentence Transformers to efficiently retrieve and index high-dimensional vector representations of text data, allowing users to compare their input with benchmark questions and determine the optimal model for response generation.
+`VectorDatabase.py` is a notebook designed to build a model router that selects the best-performing model for answering user queries based on well-known large language model (LLM) benchmarks. It leverages FAISS and Sentence Transformers to efficiently retrieve and index high-dimensional vector representations of text data, allowing users to compare their input with benchmark questions and determine the optimal model for response generation.
 
 ## Features
 - **Dataset Preparation**: Loads multiple LLM benchmark datasets from Hugging Face and processes them into JSON format.
@@ -23,19 +23,7 @@ All required dependencies are already specified within the notebook, so no addit
 - `plotly` - 3D visualization.
 - `scikit-learn` - PCA for dimensionality reduction.
 
-## Usage Instructions
-1. **Run the script**:
-   ```bash
-   python vectordatabase.py
-   ```
-2. The script will:
-   - Download LLM benchmark datasets from Hugging Face.
-   - Format them into JSON files.
-   - Convert text data into embeddings.
-   - Store embeddings in a FAISS index.
-   - Provide visualization and search capabilities.
-
-3. **Compare User Input to LLM Benchmarks**:
+ **Compare User Input to LLM Benchmarks**:
    Modify the `user_query` variable inside the script to test retrieval:
    ```python
    user_query = "What is the fastest way to sort an array?"
@@ -49,15 +37,3 @@ All required dependencies are already specified within the notebook, so no addit
 - `benchmark.index` - FAISS index file.
 - `benchmarks.json` - Metadata for vector search.
 
-## Potential Use Cases
-- Building a model router to dynamically select the best-performing LLM for each benchmark.
-- Comparing user questions to established LLM benchmark datasets.
-- Evaluating AI model performance based on benchmark similarity.
-- Identifying patterns in question similarity.
-- AI-driven document retrieval and FAQ recommendation.
-
-## Author
-This script was developed for exploring vector database applications using FAISS and embedding models.
-
-## License
-This project is released under the MIT License.
